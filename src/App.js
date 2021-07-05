@@ -9,7 +9,6 @@ function App() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(value);
-
 		reverseString(value);
 		setValue("");
 	};
@@ -17,20 +16,24 @@ function App() {
 		for (var i = value.length - 1; i >= 0; i--) {
 			reverse += value[i];
 		}
+		setString("");
 		return setString(reverse);
 	};
+
 	return (
-		<React.Fragment>
-			<form className='form' onSubmit={handleSubmit}>
-				<input
-					type='text'
-					value={value}
-					onChange={(e) => setValue(e.target.value)}
-				/>
-				<button type='submit'>Reverse</button>
-			</form>
-			<div className='output'>{string}</div>
-		</React.Fragment>
+		<section className='section-center'>
+			<div className='container'>
+				<form className='form' onSubmit={handleSubmit}>
+					<input
+						type='text'
+						value={value}
+						onChange={(e) => setValue(e.target.value)}
+					/>
+					<button type='submit'>Reverse</button>
+				</form>
+				<div className={`${string ? "border output" : "output"}`}>{string}</div>
+			</div>
+		</section>
 	);
 }
 
