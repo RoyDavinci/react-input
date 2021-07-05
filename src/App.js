@@ -8,23 +8,31 @@ function App() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(value);
-		reverseString(value);
-		setValue("");
-	};
-	const reverseString = (value) => {
 		for (var i = value.length - 1; i >= 0; i--) {
 			reverse += value[i];
 		}
-		setString("");
-		return setString(reverse);
+		setString(reverse);
+		reverse = "";
+		setValue("");
 	};
+	// const reverseString = (value) => {
+	// 	for (var i = value.length - 1; i >= 0; i--) {
+	// 		reverse += value[i];
+	// 	}
+	// 	setString("");
+	// 	return setString(reverse);
+	// };
 
 	return (
 		<section className='section-center'>
 			<div className='container'>
 				<form className='form' onSubmit={handleSubmit}>
+					<label htmlFor='text' name='text'>
+						Enter a Text, Click the button to reverse it
+					</label>
 					<input
+						name='text'
+						id='text'
 						type='text'
 						value={value}
 						onChange={(e) => setValue(e.target.value)}
