@@ -31,6 +31,7 @@ section {
 	background-color: white;
 	padding: 40px;
 	filter: brightness(100%);
+	margin: 0px 40px;
 }
 form label {
 	display: block;
