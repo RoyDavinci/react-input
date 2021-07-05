@@ -15,14 +15,6 @@ function App() {
 		reverse = "";
 		setValue("");
 	};
-	// const reverseString = (value) => {
-	// 	for (var i = value.length - 1; i >= 0; i--) {
-	// 		reverse += value[i];
-	// 	}
-	// 	setString("");
-	// 	return setString(reverse);
-	// };
-
 	return (
 		<section className='section-center'>
 			<div className='container'>
